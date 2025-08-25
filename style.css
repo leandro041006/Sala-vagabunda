@@ -1,0 +1,358 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+/* Título da seção */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: black rgb(151, 142, 142); /* Cor chamativa */
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Animação de brilho */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px gray, 0 0 10px rgb(152, 142, 142), 0 0 15px rgb(255, 255, 255);
+    }
+    100% {
+        text-shadow: 0 0 15px gray, 0 0 20px #c3bbba, 0 0 25px #bdb3b0;
+    }
+}
+
+/* Estilo para os cards de imagem */
+.image-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animação de aumento do card ao passar o mouse */
+.card:hover {
+    transform: scale(1.6); /* Aumenta o tamanho do card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta o sombreamento */
+}
+
+/* Card de imagem */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para os cards de vídeo */
+.video-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.video-card {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.6); /* Aumenta o tamanho do card */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta o sombreamento */
+}
+
+/* Capa do vídeo */
+.video-card .cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem cobrir toda a área do card */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Garante que a imagem fique sobre o vídeo */
+}
+
+/* Esconde a capa quando o vídeo estiver visível */
+.video-card.active .cover-image {
+    display: none;
+}
+
+/* Ajuste para o vídeo dentro do card */
+.video-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Garante que o vídeo se ajuste sem cortar */
+    display: none; /* Inicialmente o vídeo estará oculto */
+}
+
+/* Garantir que o vídeo em tela cheia se ajuste corretamente */
+.video-card.active video {
+    object-fit: contain; /* Isso garante que o vídeo em tela cheia não será cortado */
+}
+/* Botões gerais */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Página de login */
+#login-page {
+    display: flex;
+    height: 100vh;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+/* Seção da imagem */
+#image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+#login-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Caixa de login */
+#login-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0px 8px rgba(0, 0, 0, 0.1);
+    border-left: 3px solid #ddd;
+}
+
+/* Título */
+#login-container h1 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #444;
+    font-weight: bold;
+}
+
+/* Formulário */
+#login-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+
+#login-form input:focus {
+    border-color: #888;
+    outline: none;
+}
+
+/* Botão de login */
+#login-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#login-form button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Mensagem de erro */
+#error-message {
+    margin-top: 10px;
+    color: gray;
+    font-size: 14px;
+    display: none;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    #login-page {
+        flex-direction: column;
+    }
+
+    #image-section {
+        height: 40%;
+        background-color: #f4f4f4;
+    }
+
+    #login-container {
+        height: 60%;
+    }
+}
+/* Estilo do botão de ajuda */
+.help-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.help-button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo da mensagem de ajuda */
+.help-message {
+    display: none; /* Inicialmente a mensagem está oculta */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    z-index: 1000;
+}
+
+/* Estilo do botão para fechar a mensagem */
+.help-message button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.help-message button:hover {
+    background-color: #e53935;
+}
+.video-card {
+    position: relative;
+    width: 200px; /* Defina o tamanho da capa */
+    height: 150px; /* Defina o tamanho da capa */
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.cover-image {
+    background-color: #333; /* Cor de fundo para as capas */
+    color: white;
+    font-size: 5rem; /* Tamanho grande para o número */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+}
+
+.cover-image:before {
+    content: attr(data-number); /* Adiciona o número como conteúdo */
+}

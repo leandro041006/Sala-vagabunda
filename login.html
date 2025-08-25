@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login🩷</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login-page">
+        <div id="image-section">
+            <img id="login-image" src="imagens/nos.jpg" alt="Imagem de Login">
+        </div>
+        <div id="login-container">
+            <div id="help-message" style="display: none;">
+                Seu login é "Terceiroc" e sua senha é "N20@in22".
+            </div>
+            <button id="help-button" class="help-button">Ajuda</button>
+            <h2>Sejam bem-vindos!</h2>
+            <h1>Login</h1>
+            <form id="login-form">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="error-message" style="display: none; color: red;">Usuário ou senha incorretos!</p>
+        </div>
+    </div>
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'Terceiroc' && password === 'N20@in22') {
+                window.location.href = 'inicio.html';
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        });
+
+        const helpButton = document.getElementById('help-button');
+        const helpMessage = document.getElementById('help-message');
+
+        helpButton.addEventListener('click', () => {
+            helpMessage.style.display = 'block';
+        });
+
+        const closeButton = document.createElement('button');
+        closeButton.textContent = 'Fechar';
+        helpMessage.appendChild(closeButton);
+
+        closeButton.addEventListener('click', () => {
+            helpMessage.style.display = 'none';
+        });
+    </script>
+     <footer>
+    Desenvolvido por: <b>Leandro Candido</b>
+</footer>
+
+<style>
+    footer {
+        position: fixed;
+        bottom: 10px;   /* distância da parte de baixo */
+        left: 10px;     /* colado à esquerda */
+        font-size: 14px;
+        color: #555;
+        font-family: Arial, sans-serif;
+        opacity: 0.8;
+    }
+</style>
+</style>
+</body>
+</html>

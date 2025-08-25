@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alunos🩷</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+        background-color: #333;
+    }
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        display: inline-block;
+    }
+    nav ul li a:hover {
+        background-color: #575757;
+    }
+    h1 {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 2rem;
+        color: #333;
+    }
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+    }
+    .card {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        padding: 10px;
+        transition: transform 0.3s ease;
+    }
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .card h3 {
+        margin: 10px 0;
+        color: #333;
+        font-size: 1.1rem;
+    }
+    .card:hover {
+        transform: scale(1.05);
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+    .section-title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: bold;
+        color: black rgb(151, 142, 142);
+        text-transform: uppercase;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+        0% {
+            text-shadow: 0 0 5px gray, 0 0 10px rgb(152, 142, 142), 0 0 15px rgb(255, 255, 255);
+        }
+        100% {
+            text-shadow: 0 0 15px gray, 0 0 20px #c3bbba, 0 0 25px #bdb3b0;
+        }
+    }
+</style>
+<body>
+    <div id="main-content">
+        <nav>
+            <ul>
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="alunos.html">Alunos</a></li>
+                <li><a href="video.html">Vídeos</a></li>
+                <li><a href="lembrar.html">Lembrem-se</a></li>
+            </ul>
+        </nav>
+        <h2 class="section-title">A melhor turma de todas!!</h2>
+        <div class="cards-container">
+            <div class="card">
+                <img src="imagens/daiani.enc" alt="professora">
+                <h3>Professora Daiani</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/carol.jpeg" alt="Aluno 1">
+                <h3>Caroline Barrozo</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/caua.jpeg" alt="Aluno 2">
+                <h3>Caua Silva</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/daniel.jpeg" alt="Aluno 3">
+                <h3>Daniel Santos</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/emanuelly.jpeg" alt="Aluno 4">
+                <h3>Emanuelle Santos</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/emilly.jpg" alt="Aluno 5">
+                <h3>Emilly Jaqueline</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/gaby.jpeg" alt="Aluno 6">
+                <h3>Gabrielly Ester</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/greice.jpeg" alt="Aluno 7">
+                <h3>Greice Kely</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/guedes.jpeg" alt="Aluno 8">
+                <h3>Kauan Guedes</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/laurrany.jpeg" alt="Aluno 9">
+                <h3>Laurrany Almeida</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/leandro.jpeg" alt="Aluno 10">
+                <h3>Leandro Cândido</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/leticia.jpeg" alt="Aluno 11">
+                <h3>Letícia Torres</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/ligia.jpeg" alt="Aluno 12">
+                <h3>Ligia Freitas</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/luana.jpeg" alt="Aluno 13">
+                <h3>Luana Macedo</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/manuely.jpeg" alt="Aluno 14">
+                <h3>Manuely Aparecida</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/rafinha.jpeg" alt="Aluno 15">
+                <h3>Rafael Ribeiro</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/tailene.jpeg" alt="Aluno 16">
+                <h3>Tailene Maximiano</h3>
+            </div>
+            <div class="card">
+                <img src="imagens/vitin.jpeg" alt="Aluno 17">
+                <h3>Vitor Gabriel</h3>
+            </div>
+        </div>
+    </div>
+     <footer>
+    Desenvolvido por: <b>Leandro Candido</b>
+</footer>
+
+<style>
+    footer {
+        position: fixed;
+        bottom: 10px;   /* distância da parte de baixo */
+        left: 10px;     /* colado à esquerda */
+        font-size: 14px;
+        color: #555;
+        font-family: Arial, sans-serif;
+        opacity: 0.8;
+    }
+</style>
+    <script src="script.js"></script>
+</body>
+</html>
